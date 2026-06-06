@@ -1,7 +1,7 @@
 const app= () => {
   return(
     <div>
-      <h1>My Name is Mr.Sourav Sharma BCA MCA 2025s</h1>
+      <h1>My Name is Mr.Sourav Sharma BCA MCA 2025</h1>
     </div>
   )
 }
