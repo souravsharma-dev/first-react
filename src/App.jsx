@@ -1,9 +1,23 @@
-const app= () => {
+import {useRef} from 'react'
+
+const App = () => {
+
+  const h1 = useRef(null)
+
+const test = () => {
+  console.log(h1.current)
+  h1.current.style.color = "red"
+  h1.current.style.backgroundColor = "white"
+  h1.current.style.fontSize ="50px"
+  alert("Button clicked!")
+}
+
   return(
     <div>
-      <h1>My Name is Mr.Sourav Sharma BCA MCA 2025</h1>
+      <h1 ref={h1}>My Name is Mr.Sourav Sharma BCA MCA 2025</h1>
+      <button onClick={test}>Click Here</button>
     </div>
   )
 }
 
-export default app;
+export default App
