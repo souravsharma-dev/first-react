@@ -9,6 +9,7 @@ const test = () => {
   h1.current.style.color = "red"
   h1.current.style.backgroundColor = "white"
   h1.current.style.fontSize ="50px"
+  h1.current.style.fontWeight = "bold"
   alert("Button clicked!")
 }
 
