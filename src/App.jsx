@@ -6,7 +6,7 @@ const App = () => {
 
 const test = () => {
   console.log(h1.current)
-  h1.current.style.color = "orange"
+  h1.current.style.color = "grey"
   h1.current.style.backgroundColor = "white"
   h1.current.style.fontSize ="50px"
   h1.current.style.fontWeight = "bold"
