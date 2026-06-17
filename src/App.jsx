@@ -1,24 +1,55 @@
-import {useRef} from 'react'
+const app = () => {
+  const fetchData = () => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+      return response.json();
+    })
+    .then((users)=> {
+      console.log("users", users);
+    })  
+    .catch((error)=>{
+      console.log("error", error);
+    })
+  }
+  // Http request using fetch API
+return (
+<div>
+  <div
+  style = {{
+    width: "70%",
+    margin: "0 auto",
+  }}>
+    <h1>Fetch Data</h1>
+  </div>  
+  <button 
+  style={{ 
+    background: "green", 
+    width: "80px",
+    padding: "5px",
+    margin: "0 auto" }} 
+  onClick={fetchData}>
+    Fetch Data
+  </button>
 
-const App = () => {
+  <div style = {{
+    marginTop: "20px",
+  }}>
+    <div style = {{
+      border: "1px solid black",
+      width: "70%",
+      margin: "0 auto",
+      padding: "10px",
+      boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+      backgroundColor: "darkblue",
+    }}>
+      <h1 style = {{ color: "white", fontWeight: "bold" }}>Name</h1>
+      <p style = {{ color: "white" }}>Username</p>
+      <p style = {{ color: "white" }}>email</p>
+      <p style = {{ color: "white" }}>address</p>
 
-  const h1 = useRef(null)
-
-const test = () => {
-  console.log(h1.current)
-  h1.current.style.color = "grey"
-  h1.current.style.backgroundColor = "white"
-  h1.current.style.fontSize ="50px"
-  h1.current.style.fontWeight = "bold"
-  alert("Button clicked!")
-}
-
-  return(
-    <div>
-      <h1 ref={h1}>My Name is Mr.Sourav Sharma BCA MCA 2025</h1>
-      <button onClick={test}>Click Here</button>
     </div>
-  )
+  </div>
+</div>
+);  
 }
-
-export default App
+export default app;
