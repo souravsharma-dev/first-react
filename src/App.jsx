@@ -35,7 +35,7 @@ return (
     marginTop: "20px",
   }}>
     <div style = {{
-      border: "1px solid black",
+      border: "2px solid black",
       width: "70%",
       margin: "0 auto",
       padding: "10px",
