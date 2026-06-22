@@ -25,29 +25,16 @@ return (
   style={{ 
     background: "green", 
     width: "80px",
-    padding: "5px",
+    padding: "7px",
     margin: "0 auto" }} 
   onClick={fetchData}>
     Fetch Data
   </button>
 
   <div style = {{
-    marginTop: "20px",
+    marginTop: "22px",
   }}>
-    <div style = {{
-      border: "6px solid black",
-      width: "70%",
-      margin: "0 auto",
-      padding: "10px",
-      boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-      backgroundColor: "darkblue",
-    }}>
-      <h1 style = {{ color: "white", fontWeight: "bold" }}>Name</h1>
-      <p style = {{ color: "white" }}>Username</p>
-      <p style = {{ color: "white" }}>email</p>
-      <p style = {{ color: "white" }}>address</p>
-
-    </div>
+    
   </div>
 </div>
 );  
