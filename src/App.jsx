@@ -1,4 +1,9 @@
-const app = () => {
+import {useState} from "react"
+
+const App = () => {
+
+  const [userData, setUserData] = useState([])
+
   const fetchData = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => {
@@ -6,6 +11,7 @@ const app = () => {
     })
     .then((users)=> {
       console.log("users", users);
+      setUserData(users);
     })  
     .catch((error)=>{
       console.log("error", error);
@@ -34,9 +40,26 @@ return (
   <div style = {{
     marginTop: "22px",
   }}>
-    
+    {
+      userData.map(() =>(
+        <div style = {{
+      border: "6px solid black",
+      width: "70%",
+      margin: "0 auto",
+      padding: "10px",
+      boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+      backgroundColor: "darkblue",
+    }}>
+      <h1 style = {{ color: "white", fontWeight: "bold" }}>Name</h1>
+      <p style = {{ color: "white" }}>Username</p>
+      <p style = {{ color: "white" }}>email</p>
+      <p style = {{ color: "white" }}>address</p>
+
+    </div>
+      ))
+    }
   </div>
 </div>
 );  
 }
-export default app;
+export default App;
