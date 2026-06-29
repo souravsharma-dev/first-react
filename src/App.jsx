@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={testdata}>Click Me to Fetch Data</button>
+      <button onClick={testdata}>Click  to Fetch Data</button>
     </div>
   );
 }
